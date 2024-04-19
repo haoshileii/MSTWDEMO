@@ -4,11 +4,16 @@
       <!--头部  -->
       <el-header>
         <div>
-          <img
-            src="https://i.gtimg.cn/club/item/face/img/2/15922_100.gif"
-            alt=""
-          />
-          <span>数据集管理系统</span>
+          <!-- <img
+            src="..\src\assets\logo3.png"
+            class="round-image"
+            alt="logo"
+            width="50px"
+            height="60px"
+            border-radius="50%"
+            object-fit="cover"
+          /> -->
+          <span>多变量时间序列数据可视化系统</span>
         </div>
         <!-- 退出按钮 -->
         <el-button type="info" @click="logout">退出</el-button>
@@ -54,9 +59,21 @@
               <i class="el-icon-document"></i>
               <span slot="title">导航三</span>
             </el-menu-item>
-            <el-menu-item index="4">
+            <el-submenu index="4">
+              <template slot="title">
+                <i class="el-icon-connection"></i>
+                <span slot="title">导航四</span>
+              </template>
+              <el-button type="primary" margin="0" @click="jump"
+                >时间序列分类网站</el-button
+              >
+              <el-button type="primary" margin="0" @click="jump"
+                >时间序列分类网站</el-button
+              >
+            </el-submenu>
+            <el-menu-item index="5">
               <i class="el-icon-setting"></i>
-              <span slot="title">导航四</span>
+              <span slot="title">设置</span>
             </el-menu-item>
           </el-menu>
         </el-aside>
@@ -88,6 +105,9 @@ export default {
     handleClose(key, keyPath) {
       console.log(key, keyPath);
     },
+    jump() {
+      window.open("https://www.timeseriesclassification.com", "_blank");
+    },
   },
 };
 </script>
@@ -108,7 +128,7 @@ export default {
   height: 100%;
 }
 .el-header {
-  background-color: #373d41;
+  background-color: #409eff;
   display: flex;
   justify-content: space-between;
   padding-left: 0px;
