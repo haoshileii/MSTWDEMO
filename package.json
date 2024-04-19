@@ -35,6 +35,9 @@
     "sass-loader": "^14.2.0",
     "vue-template-compiler": "^2.6.14"
   },
+  "prettier": {
+    "endOfLine": "auto"
+  },
   "eslintConfig": {
     "root": true,
     "env": {
